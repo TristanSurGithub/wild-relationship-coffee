@@ -37,7 +37,10 @@ module.exports = {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: '/images/[name].[ext]',
+                    name: '[name].[ext]',
+                    publicPath: 'images/',
+                    outputPath: 'images/',
+                    esModule: false
                 },
             },
         ]

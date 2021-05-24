@@ -1,0 +1,70 @@
+//===== Colors =====//
+
+//Primary colors
+$primary-color-lightest: #FF919A;
+$primary-color-lighter: #FB7E89;
+$primary-color-main: #EF6F7A;
+$primary-color-darker: #D15B65;
+$primary-color-darkest: #B24952;
+
+//Secondary colors
+$secondary-color-lightest: #B4DEB9;
+$secondary-color-lighter: #A5D3AA;
+$secondary-color-main: #97C69C;
+$secondary-color-darker: #80AB85;
+$secondary-color-darkest: #69906E;
+
+//Neutral colors
+$neutral-color-primary-grey: #2F2E33;
+$neutral-color-secondary-grey: #DDDDDD;
+$neutral-color-light-grey: #F4F4F4;
+$neutral-color-white: #FEFEFE;
+//===== End Colors =====//
+
+//===== Fonts =====//
+
+//=== WorkSans ===//
+//WorkSans WorkSans Light
+@font-face {
+  font-family: "WorkSans Light";
+  src: url("../fonts/Work_Sans/static/WorkSans-Light.ttf") format("ttf");
+}
+
+//WorkSans WorkSans Regular
+@font-face {
+  font-family: "WorkSans Regular";
+  src: url("../fonts/Work_Sans/static/WorkSans-Regular.ttf") format("ttf");
+}
+
+//WorkSans WorkSans SemiBold
+@font-face {
+  font-family: "WorkSans SemiBold";
+  src: url("../fonts/Work_Sans/static/WorkSans-SemiBold.ttf") format("ttf");
+}
+
+//WorkSans WorkSans ExtraBold
+@font-face {
+  font-family: "WorkSans SemiBold";
+  src: url("../fonts/Work_Sans/static/WorkSans-ExtraBold.ttf") format("ttf");
+}
+
+//=== François One ===//
+//François One Regular
+@font-face {
+  font-family: "François One Regular";
+  src: url("../fonts/Francois_One/FrancoisOne-Regular.ttf") format("ttf");
+}
+//===== End Fonts =====//
+
+//===== General =====//
+body {
+  margin: 0;
+  padding: 0;
+  background: $primary-color-main;
+  background: linear-gradient(179.73deg, #DCC5B7 1.92%, #E6CFC1 7.53%, #E5CBBE 32.56%, #F2DCCE 48.9%, #F0D9CB 50.95%, #F7E1D3 61.67%, #F9E3D5 75.97%, #FAE7D9 96.91%);
+}
+
+ul {
+  list-style:none;
+}
+//===== End General =====//
