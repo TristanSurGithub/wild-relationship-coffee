@@ -55,6 +55,12 @@ $neutral-color-white: #FEFEFE;
   src: url("./fonts/Francois_One/FrancoisOne-Regular.ttf") format("truetype");
 }
 
+// === Glegoo ===//
+//Glegoo Bold
+@font-face {
+  font-family: "Glegoo Bold";
+  src: url("./fonts/Glegoo/Glegoo-Bold.ttf") format("truetype");
+}
 //===== End Fonts =====//
 
 //===== General =====//
@@ -92,7 +98,7 @@ ul {
 }
 
 .title-4 {
-  font-family: "François One", sans-serif;
+  font-family: "Glegoo Bold", sans-serif;
   font-size: 18px;
 }
 
