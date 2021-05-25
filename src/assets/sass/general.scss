@@ -33,26 +33,26 @@ $neutral-color-white: #FEFEFE;
 //WorkSans WorkSans Regular
 @font-face {
   font-family: "WorkSans Regular";
-  src: url("../fonts/Work_Sans/static/WorkSans-Regular.ttf") format("ttf");
+  src: url("./fonts/Work_Sans/static/WorkSans-Regular.ttf") format("truetype");
 }
 
 //WorkSans WorkSans SemiBold
 @font-face {
   font-family: "WorkSans SemiBold";
-  src: url("../fonts/Work_Sans/static/WorkSans-SemiBold.ttf") format("ttf");
+  src: url("./fonts/Work_Sans/static/WorkSans-SemiBold.ttf") format("truetype");
 }
 
 //WorkSans WorkSans ExtraBold
 @font-face {
   font-family: "WorkSans SemiBold";
-  src: url("../fonts/Work_Sans/static/WorkSans-ExtraBold.ttf") format("ttf");
+  src: url("./fonts/Work_Sans/static/WorkSans-ExtraBold.ttf") format("truetype");
 }
 
 //=== François One ===//
 //François One Regular
 @font-face {
-  font-family: "François One Regular";
-  src: url("../fonts/Francois_One/FrancoisOne-Regular.ttf") format("ttf");
+  font-family: "François One";
+  src: url("./fonts/Francois_One/FrancoisOne-Regular.ttf") format("truetype");
 }
 //===== End Fonts =====//
 
@@ -60,6 +60,8 @@ $neutral-color-white: #FEFEFE;
 body {
   margin: 0;
   padding: 0;
+  font-family: "WorkSans Regular", sans-serif;
+  font-size: 16px;
   background: $primary-color-main;
   background: linear-gradient(179.73deg, #DCC5B7 1.92%, #E6CFC1 7.53%, #E5CBBE 32.56%, #F2DCCE 48.9%, #F0D9CB 50.95%, #F7E1D3 61.67%, #F9E3D5 75.97%, #FAE7D9 96.91%);
 }
@@ -67,4 +69,40 @@ body {
 ul {
   list-style:none;
 }
+
+// Title
+.title-1{
+  font-family: "François One", sans-serif;
+  font-size: 128px;
+}
+
+.title-2{
+  font-family: "François One", sans-serif;
+  font-size: 108px;
+}
+
+.title-3{
+  font-family: "François One", sans-serif;
+  font-size: 80px;
+}
+
+.title-4{
+  font-family: "François One", sans-serif;
+  font-size: 18px;
+}
+
+// Button
+button {
+  background: $primary-color-main;
+  width: 236px;
+  padding: 10px;
+  border: 1px solid $primary-color-main;
+  border-radius: 10px;
+
+  a {
+    color: $neutral-color-white;
+    text-decoration: none;
+  }
+}
+
 //===== End General =====//

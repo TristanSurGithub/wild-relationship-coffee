@@ -1,0 +1,11 @@
+//===== Footer =====//
+footer {
+  background: url("./../build/images/illustrations/bgfooter.svg") no-repeat center top;
+  background-size: 100%;
+  padding-top: 5%;
+
+  ul {
+    display: flex;
+    margin: 0;
+  }
+}
