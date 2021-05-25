@@ -54,6 +54,7 @@ $neutral-color-white: #FEFEFE;
   font-family: "François One";
   src: url("./fonts/Francois_One/FrancoisOne-Regular.ttf") format("truetype");
 }
+
 //===== End Fonts =====//
 
 //===== General =====//
@@ -62,31 +63,35 @@ body {
   padding: 0;
   font-family: "WorkSans Regular", sans-serif;
   font-size: 16px;
+  color: $neutral-color-primary-grey;
   background: $primary-color-main;
   background: linear-gradient(179.73deg, #DCC5B7 1.92%, #E6CFC1 7.53%, #E5CBBE 32.56%, #F2DCCE 48.9%, #F0D9CB 50.95%, #F7E1D3 61.67%, #F9E3D5 75.97%, #FAE7D9 96.91%);
 }
 
 ul {
-  list-style:none;
+  list-style: none;
 }
 
+.bold {
+  font-weight: bold;
+}
 // Title
-.title-1{
+.title-1 {
   font-family: "François One", sans-serif;
   font-size: 128px;
 }
 
-.title-2{
+.title-2 {
   font-family: "François One", sans-serif;
   font-size: 108px;
 }
 
-.title-3{
+.title-3 {
   font-family: "François One", sans-serif;
   font-size: 80px;
 }
 
-.title-4{
+.title-4 {
   font-family: "François One", sans-serif;
   font-size: 18px;
 }
@@ -94,14 +99,15 @@ ul {
 // Button
 button {
   background: $primary-color-main;
-  width: 236px;
   padding: 10px;
   border: 1px solid $primary-color-main;
   border-radius: 10px;
 
   a {
     color: $neutral-color-white;
+    font-size: 20px;
     text-decoration: none;
+    padding: 10px 20px;
   }
 }
 
