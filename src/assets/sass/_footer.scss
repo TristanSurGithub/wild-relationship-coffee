@@ -1,11 +1,32 @@
 //===== Footer =====//
 footer {
+  display: flex;
+  justify-content: space-around;
   background: url("./../build/images/illustrations/bgfooter.svg") no-repeat center top;
   background-size: 100%;
-  padding-top: 5%;
+  padding-top: 10%;
+  padding-bottom: 5%;
 
   ul {
     display: flex;
+    flex-direction: column;
     margin: 0;
+
+    li {
+      margin-bottom: 1em;
+
+      a {
+        text-decoration: none;
+        color: $neutral-color-primary-grey;
+
+        &:visited {
+          color: $neutral-color-primary-grey;
+        }
+      }
+    }
+
+    .title-4 {
+      margin-bottom: 1.25em;
+    }
   }
 }
