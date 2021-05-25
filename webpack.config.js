@@ -22,7 +22,11 @@ module.exports = {
                 test: /\.sc|ass$/,
                 use: [
                     {loader: MiniCssExtractPlugin.loader},
-                    {loader: "css-loader"},
+                    {loader: "css-loader",
+                        options: {
+                        url: false
+                        }
+                    },
                     {loader: "sass-loader"}
                 ]
             },
@@ -48,12 +52,12 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].css",
-            chunkFilename: "[id].css"
         }),
 
         new CopyPlugin({
             patterns: [
                 { from: "src/assets/images", to: "images" },
+                { from: "src/assets/fonts", to: "fonts" },
             ],
         }),
     ]
