@@ -10,7 +10,7 @@
     margin-left: 10em;
     margin-top: 10em;
 
-    .current-product {
+    .current-product-container {
       display: block;
       width: 300px;
       text-align: center;
@@ -28,6 +28,14 @@
     .select-product-container {
       display: flex;
       gap: 4.3em;
+
+      .intensity {
+        display: none;
+      }
+
+      .title-intensity {
+        display: none;
+      }
 
       #select-product {
         display: flex;
@@ -62,30 +70,29 @@
     }
   }
 
-  .profile-container {
+  #profile-container {
     background: $transparent-color-white;
     border-radius: 20px;
     padding: 2.3em 3.1em;
     width: 500px;
-    height: 100%;
+    height: 350px;
     margin-right: 5em;
     margin-top: 12em;
 
-    .ingredient-container {
-      padding-top: 2.5em;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      column-gap: 7em;
+    .profile {
+      display: none;
+      grid-template-columns: repeat(2, 170px);
+      grid-template-rows: repeat(2, 90px);
+      column-gap: 5em;
       align-items: baseline;
-      text-align: center;
+      text-align: start;
+      padding-top: 2em;
+    }
 
-      div {
-        height: 100px;
-      }
+    #active-profile {
+      display: grid;
     }
   }
 }
-
 
 

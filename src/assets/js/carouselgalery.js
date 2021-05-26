@@ -1,6 +1,16 @@
 var slides = document.getElementById('select-product');
-var imgs = slides.getElementsByTagName('img');
-var imagemSelecionada = document.getElementById('displayed-img');
+var profiles = document.getElementById('profile-container');
+
+var imageSelectProducts = slides.getElementsByClassName('product');
+var imageSelectIntensity = slides.getElementsByClassName('intensity');
+var SelectTitleIntensity = slides.getElementsByClassName('title-intensity');
+var getProfile = profiles.getElementsByClassName('profile');
+
+
+var imageProductSelect = document.getElementById('current-product');
+var imageIntensitySelect = document.getElementById('current-intensity');
+var imageTitleIntensitySelect = document.getElementById('current-title-intensity');
+
 var prev = document.querySelector('.prev');
 var next = document.querySelector('.next');
 var counter = 0;
@@ -8,16 +18,18 @@ var counter = 0;
 next.addEventListener('click', nextSlide, false);
 prev.addEventListener('click', prevSlide, false);
 
-for (var i = 0; i < imgs.length; i++) {
+for (var i = 0; i < imageSelectProducts.length; i++) {
     var index = i;
-    var imagem = imgs[i];
+    var imagem = imageSelectProducts[i];
     clickImage(imagem, index);
 }
 
 function goToSlide(n) {
-    counter = (n + imgs.length) % imgs.length;
-    mudaImagem(imgs[counter], n);
-    console.log(counter)
+    counter = (n + imageSelectProducts.length) % imageSelectProducts.length;
+    changeImageProduct(imageSelectProducts[counter]);
+    changeImageIntensity(imageSelectIntensity[counter]);
+    changeTitleIntensity(SelectTitleIntensity[counter]);
+    changeProfile(getProfile[counter]);
 }
 
 function nextSlide() {
@@ -28,15 +40,30 @@ function prevSlide() {
     goToSlide(counter - 1);
 }
 
-function mudaImagem(imagem, index) {
+function changeImageProduct(imagem) {
     var path = imagem.getAttribute('src');
-    imagemSelecionada.setAttribute('src', path);
+    imageProductSelect.setAttribute('src', path);
+}
+
+function changeImageIntensity(imagem) {
+    var path = imagem.getAttribute('src');
+    imageIntensitySelect.setAttribute('src', path);
+}
+
+function changeTitleIntensity(imagem) {
+    imageTitleIntensitySelect.innerHTML = imagem.textContent;
+}
+
+function changeProfile(imagem) {
+    var getProfileActive = document.getElementById('active-profile');
+    getProfileActive.removeAttribute('id');
+    imagem.setAttribute('id','active-profile');
 }
 
 function clickImage(imagem, index) {
     imagem.addEventListener('click', function (event) {
         event.preventDefault();
-        mudaImagem(imagem, index);
+        changeImageProduct(imagem, index);
         goToSlide(index);
     });
 }
