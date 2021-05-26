@@ -19,6 +19,9 @@ $neutral-color-primary-grey: #2F2E33;
 $neutral-color-secondary-grey: #DDDDDD;
 $neutral-color-light-grey: #F4F4F4;
 $neutral-color-white: #FEFEFE;
+
+//Other
+$transparent-color-white: rgba(255, 255, 255, 0.3);
 //===== End Colors =====//
 
 //===== Fonts =====//
@@ -98,6 +101,16 @@ ul {
 }
 
 .title-4 {
+  font-family: "François One", sans-serif;
+  font-size: 30px;
+}
+
+.title-5 {
+  font-family: "François One", sans-serif;
+  font-size: 18px;
+}
+
+.title-footer {
   font-family: "Glegoo Bold", sans-serif;
   font-size: 18px;
 }

@@ -5,7 +5,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./build/main.css">
-    <script src="./build/bundle.js"></script>
     <title>Wild Relationship Coffee</title>
 </head>
 <body>
@@ -27,7 +26,7 @@
     <section id="home">
         <div class="container">
             <div class="title-2">Incroyablement Subtil</div>
-            <button class="btn-product"><a href="#">Découvrez nos produits</a></button>
+            <button class="btn-product"><a href="#our-products">Découvrez nos produits</a></button>
             <img class="img-products" src="./build/images/products/products.png"
                  alt="Images des 3 produits Wild Relationship Coffee">
         </div>
@@ -64,7 +63,7 @@
                             <span class="bold">éthique de travail irréprochable.</span>
                         </p>
                     </div>
-                    <button class="btn-product"><a href="#">Découvrez nos produits</a></button>
+                    <button class="btn-product"><a href="#our-products">Découvrez nos produits</a></button>
                 </div>
             </div>
         </div>
@@ -95,7 +94,7 @@
                             d’engagement sur le plan social et environnemental.
                         </p>
                     </div>
-                    <button class="btn-product"><a href="#">Découvrez nos produits</a></button>
+                    <button class="btn-product"><a href="#our-products">Découvrez nos produits</a></button>
                 </div>
             </div>
         </div>
@@ -110,12 +109,12 @@
                         de café Caturra rouge biologique dans une partie
                         de leur ferme qu'ils aiment appeler "La Llama".
                     </div>
-                    <button class="btn-product"><a href="#">Achetez ce produit</a></button>
+                    <button class="btn-product"><a href="#our-products">Achetez ce produit</a></button>
                 </div>
             </div>
             <div class="right-column">
-                <div class="product-container">
-                    <img src="./build/images/products/green-packgaging.png" alt="Coffee La Llama">
+                <div>
+                    <img src="./build/images/products/green-packaging.svg" alt="Coffee La Llama">
                 </div>
             </div>
         </div>
@@ -131,7 +130,7 @@
                 </div>
             </div>
             <div class="right-column">
-                <img src="./build/images/products/purple-packgaging.png" alt="El Pirian">
+                <img src="./build/images/products/purple-packaging.svg" alt="El Pirian">
             </div>
         </div>
         <div>
@@ -146,36 +145,113 @@
                 </div>
             </div>
             <div class="right-column">
-                <img src="./build/images/products/yellow-packgaging.png" alt="La Pinan">
+                <img src="./build/images/products/yellow-packaging.svg" alt="La Pinan">
             </div>
         </div>
     </section>
     <section id="our-ingredients">
+        <div class="products-container">
+            <div class="current-product carrousel motion-object">
+                <img id="displayed-img" src="./build/images/products/green-packaging.svg" alt="">
+                <img src="./build/images/products/ingredients-pictograms/intensity.svg" alt="">
+                <div>Intensité 3</div>
+            </div>
+            <div class="select-product-container">
+                <button class="prev">
+                    <img src="./build/images/products/ingredients-pictograms/chevron-left.svg" alt="">
+                </button>
+
+                <div id="select-product" >
+                    <div>
+                        <img src="./build/images/products/green-packaging.svg" alt="">
+                        <div class="title-5">La Llama</div>
+                    </div>
+                    <div>
+                        <img src="./build/images/products/purple-packaging.svg" alt="">
+                        <div class="title-5">El Pirian</div>
+                    </div>
+                    <div>
+                        <img src="./build/images/products/yellow-packaging.svg" alt="">
+                        <div class="title-5">La Pinan</div>
+                    </div>
+                </div>
+
+                <button class="next">
+                    <img src="./build/images/products/ingredients-pictograms/chevron-right.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="profile-container">
+            <div class="title-4">Profil</div>
+            <div class="ingredient-container">
+                <div>
+                    <img src="./build/images/products/ingredientsgreen/chocolate.png" alt="">
+                    <div>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
+                        Chocolat
+                        <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
+                                   alt=""></span>
+                    </div>
+                </div>
+                <div>
+                    <img src="./build/images/products/ingredientsgreen/raspberry.png" alt="">
+                    <div>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
+                        Framboise
+                        <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
+                                   alt=""></span>
+                    </div>
+                </div>
+                <div>
+                    <img src="./build/images/products/ingredientsgreen/honey.png" alt="">
+                    <div>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
+                        Miel
+                        <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
+                                   alt=""></span>
+                    </div>
+                </div>
+                <div>
+                    <img src="./build/images/products/ingredientsgreen/almond.png" alt="">
+                    <div>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
+                        Amande
+                        <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
+                                   alt=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 <footer>
     <ul>
-        <li class="title-4">Produits</li>
+        <li class="title-footer">Produits</li>
         <li><a href="#">La Llama</a></li>
         <li><a href="#">El Pirian</a></li>
         <li><a href="#">La Pinan</a></li>
     </ul>
     <ul>
-        <li class="title-4">Plus d’informations</li>
+        <li class="title-footer">Plus d’informations</li>
         <li><a href="#">Nos revendeurs</a></li>
         <li><a href="#">Nos contacter</a></li>
     </ul>
     <ul>
-        <li class="title-4">Service client</li>
+        <li class="title-footer">Service client</li>
         <li><a href="#">Livraisons et retours</a></li>
         <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Conditions générales de vente</a></li>
         <li><a href="#">FAQ</a></li>
     </ul>
     <ul>
-        <li class="title-4">Paiement</li>
+        <li class="title-footer">Paiement</li>
         <li><img src="./build/images/payment.svg" alt="Paiement disponible"></li>
     </ul>
 </footer>
+<script src="./build/bundle.js"></script>
 </body>
 </html>
