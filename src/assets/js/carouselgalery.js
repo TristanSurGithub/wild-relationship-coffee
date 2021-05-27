@@ -1,18 +1,19 @@
 var slides = document.getElementById('select-product');
 var profiles = document.getElementById('profile-container');
 
-var imageSelectProducts = slides.getElementsByClassName('product');
-var imageSelectIntensity = slides.getElementsByClassName('intensity');
-var SelectTitleIntensity = slides.getElementsByClassName('title-intensity');
+var productSelected = slides.getElementsByClassName('product-item');
+var imageProductSelected = slides.getElementsByClassName('img-product');
+var imageIntensitySelected = slides.getElementsByClassName('intensity');
+var titleIntensitySelected = slides.getElementsByClassName('title-intensity');
 var getProfile = profiles.getElementsByClassName('profile');
 var getProductContainer = document.getElementById('current-product-container');
 
 var getIngredientContainer = document.getElementById('ingredient-container');
 
 
-var imageProductSelect = document.getElementById('current-product');
-var imageIntensitySelect = document.getElementById('current-intensity');
-var imageTitleIntensitySelect = document.getElementById('current-title-intensity');
+var currentImageProduct = document.getElementById('current-product');
+var currentImageIntensity = document.getElementById('current-intensity');
+var currentImageTitleIntensity = document.getElementById('current-title-intensity');
 
 var prev = document.querySelector('.prev');
 var next = document.querySelector('.next');
@@ -21,17 +22,17 @@ var counter = 0;
 next.addEventListener('click', nextSlide, false);
 prev.addEventListener('click', prevSlide, false);
 
-for (var i = 0; i < imageSelectProducts.length; i++) {
+for (var i = 0; i < imageProductSelected.length; i++) {
     var index = i;
-    var imagem = imageSelectProducts[i];
+    var imagem = imageProductSelected[i];
     clickImage(imagem, index);
 }
 
 function goToSlide(n) {
-    counter = (n + imageSelectProducts.length) % imageSelectProducts.length;
-    changeImageProduct(imageSelectProducts[counter], counter);
-    changeImageIntensity(imageSelectIntensity[counter]);
-    changeTitleIntensity(SelectTitleIntensity[counter]);
+    counter = (n + imageProductSelected.length) % imageProductSelected.length;
+    changeImageProduct(imageProductSelected[counter], counter);
+    changeImageIntensity(imageIntensitySelected[counter]);
+    changeTitleIntensity(titleIntensitySelected[counter]);
     changeProfile(getProfile[counter]);
 }
 
@@ -47,18 +48,21 @@ function prevSlide() {
 
 function Animated() {
     getProductContainer.classList.add('animated');
-    getProductContainer.style.top = "-90px";
-    setTimeout(stopAnimated, 4000);
+    setTimeout(stopAnimated, 2000);
 }
 
 function stopAnimated() {
     getProductContainer.classList.remove('animated');
-    getProductContainer.style.top = "15%";
 }
 
 function changeImageProduct(image, index) {
     var path = image.getAttribute('src');
-    imageProductSelect.setAttribute('src', path);
+    currentImageProduct.setAttribute('src', path);
+    //Get old Product Selected for remove id
+    document.getElementById('selected').removeAttribute('id');
+    //Added new id selected
+    productSelected[index].setAttribute('id', 'selected');
+    //Half Circle Color
     switch (index) {
         case 0:
             getIngredientContainer.className = '';
@@ -80,11 +84,11 @@ function changeImageProduct(image, index) {
 
 function changeImageIntensity(image) {
     var path = image.getAttribute('src');
-    imageIntensitySelect.setAttribute('src', path);
+    currentImageIntensity.setAttribute('src', path);
 }
 
 function changeTitleIntensity(title) {
-    imageTitleIntensitySelect.innerHTML = title.textContent;
+    currentImageTitleIntensity.innerHTML = title.textContent;
 }
 
 function changeProfile(profileTag) {

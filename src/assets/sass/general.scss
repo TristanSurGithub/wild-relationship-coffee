@@ -13,6 +13,9 @@ $secondary-color-lighter: #A5D3AA;
 $secondary-color-main: #97C69C;
 $secondary-color-darker: #80AB85;
 $secondary-color-darkest: #69906E;
+$secondary-color-green: #73C7AE;
+$secondary-color-purple: #9F8DD5;
+$secondary-color-yellow: #FBD152;
 
 //Neutral colors
 $neutral-color-primary-grey: #2F2E33;
@@ -122,12 +125,30 @@ button {
   border: 1px solid $primary-color-main;
   border-radius: 10px;
 
+  &:hover {
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+  }
+
   a {
     color: $neutral-color-white;
+    font-family: "François One", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 10px 20px;
   }
 }
 
+//Class Color
+.green {
+  background: $secondary-color-green;
+}
+
+.purple {
+  background: $secondary-color-purple;
+}
+
+.yellow {
+  background: $secondary-color-yellow;
+}
 //===== End General =====//

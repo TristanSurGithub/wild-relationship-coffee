@@ -1,19 +1,30 @@
 //===== Home =====//
 #home {
   position: relative;
-  background: url("./../build/images/illustrations/mountain.svg") no-repeat;
+  background: url("./../build/images/illustrations/bg.svg") no-repeat;
   background-size: 100%;
-  height: 100%;
+  height: 120%;
+  margin-bottom: 1em;
+
+  > div {
+    position: absolute;
+  }
 
   .container {
-    position: absolute;
+    top: 35%;
     left: 50%;
     transform: translate(-50%);
+    width: 60%;
 
     .img-products {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: -100px;
+      height: 550px;
+    }
+
+    button {
+      margin-top: 2em;
     }
   }
 }

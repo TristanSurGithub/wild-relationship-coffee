@@ -15,9 +15,18 @@
                 <a href="#"><img src="./build/images/logo/default_logo.svg" alt="Logo Wild Relationship Coffee"></a>
             </li>
             <ul class="submenu">
-                <li><a href="#our-history">Notre Histoire</a></li>
-                <li><a href="#our-products">Nos Produits</a></li>
-                <li><a href="#our-ingredients">Nos Ingrédients</a></li>
+                <li>
+                    <div class="line green"></div>
+                    <a href="#our-history">Notre Histoire</a>
+                </li>
+                <li>
+                    <div class="line purple"></div>
+                    <a href="#our-products">Nos Produits</a>
+                </li>
+                <li>
+                    <div class="line yellow"></div>
+                    <a href="#our-ingredients">Nos Ingrédients</a>
+                </li>
             </ul>
         </ul>
     </nav>
@@ -25,7 +34,10 @@
 <main>
     <section id="home">
         <div class="container">
-            <div class="title-2">Incroyablement Subtil</div>
+            <div class="title-2">
+                <div>Incroyablement</div>
+                Subtil
+            </div>
             <button class="btn-product"><a href="#our-products">Découvrez nos produits</a></button>
             <img class="img-products" src="./build/images/products/products.png"
                  alt="Images des 3 produits Wild Relationship Coffee">
@@ -104,12 +116,15 @@
             <div class="left-column">
                 <img src="./build/images/products/line-point-1.svg" alt="">
                 <div class="card">
-                    <div class="title-1">La Llama</div>
+                    <div>
+                        <div class="title-1">La Llama</div>
+                        <span class="green"></span>
+                    </div>
                     <div class="description">Les Zamoras ont cultivé ce merveilleux micro-lot
                         de café Caturra rouge biologique dans une partie
                         de leur ferme qu'ils aiment appeler "La Llama".
                     </div>
-                    <button class="btn-product"><a href="#our-products">Achetez ce produit</a></button>
+                    <button class="btn-product"><a href="#our-ingredients">Achetez ce produit</a></button>
                 </div>
             </div>
             <div class="right-column">
@@ -122,7 +137,10 @@
             <div class="left-column">
                 <img src="./build/images/products/line-point-2.svg" alt="">
                 <div class="card">
-                    <div class="title-1">El Pirian</div>
+                    <div>
+                        <div class="title-1">El Pirian</div>
+                        <span class="purple"></span>
+                    </div>
                     <div class="description">Les Zamoras ont cultivé ce merveilleux micro-lot de café Caturra rouge
                         biologique
                         dans une partie de leur ferme qu'ils aiment appeler "La Llama".
@@ -137,7 +155,10 @@
             <div class="left-column">
                 <img src="./build/images/products/line-point-3.svg" alt="">
                 <div class="card">
-                    <div class="title-1">La Pinan</div>
+                    <div>
+                        <div class="title-1">La Pinan</div>
+                        <span class="yellow"></span>
+                    </div>
                     <div class="description">Les Zamoras ont cultivé ce merveilleux micro-lot de café Caturra rouge
                         biologique
                         dans une partie de leur ferme qu'ils aiment appeler "La Llama".
@@ -154,7 +175,8 @@
             <div class="products-container">
                 <div id="current-product-container">
                     <img id="current-product" src="./build/images/products/green-packaging.svg" alt="">
-                    <img id="current-intensity" src="./build/images/products/ingredients-pictograms/intensity-3.svg" alt="">
+                    <img id="current-intensity" src="./build/images/products/ingredients-pictograms/intensity-3.svg"
+                         alt="">
                     <div id="current-title-intensity">Intensité 3</div>
                 </div>
                 <div class="select-product-container">
@@ -163,28 +185,26 @@
                     </button>
 
                     <div id="select-product">
-                        <div>
-                            <img class="product" src="./build/images/products/green-packaging.svg" alt="">
+                        <div id="selected" class="product-item">
+                            <img class="img-product" src="./build/images/products/green-packaging.svg" alt="">
                             <div class="title-5">La Llama</div>
                             <img class="intensity" src="./build/images/products/ingredients-pictograms/intensity-3.svg"
                                  alt="">
                             <div class="title-intensity">Intensité 3</div>
                         </div>
-                        <div>
-                            <img class="product" src="./build/images/products/purple-packaging.svg" alt="">
+                        <div class="product-item">
+                            <img class="img-product" src="./build/images/products/purple-packaging.svg" alt="">
                             <div class="title-5">El Pirian</div>
                             <img class="intensity" src="./build/images/products/ingredients-pictograms/intensity-4.svg"
                                  alt="">
                             <div class="title-intensity">Intensité 4</div>
-
                         </div>
-                        <div>
-                            <img class="product" src="./build/images/products/yellow-packaging.svg" alt="">
+                        <div class="product-item">
+                            <img class="img-product" src="./build/images/products/yellow-packaging.svg" alt="">
                             <div class="title-5">La Pinan</div>
                             <img class="intensity" src="./build/images/products/ingredients-pictograms/intensity-5.svg"
                                  alt="">
                             <div class="title-intensity">Intensité 5</div>
-
                         </div>
                     </div>
 
@@ -199,7 +219,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/chocolate.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Chocolat
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -208,7 +229,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/raspberry.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Framboise
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -217,7 +239,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/honey.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Miel
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -226,7 +249,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/almond.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Amande Douce
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -237,7 +261,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/blueberry.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Myrtille
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -246,7 +271,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/raspberry.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Framboise
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -255,7 +281,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/chocolate.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Chocolat
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -264,7 +291,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/almond.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Amande Douce
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -275,7 +303,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/ananas.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Ananas
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -284,7 +313,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/blueberry.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Myrtille
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -293,7 +323,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/honey.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Miel
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>
@@ -302,7 +333,8 @@
                     <div>
                         <img src="./build/images/products/ingredients/sugar-cane.png" alt="">
                         <div>
-                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg" alt=""></span>
+                            <span><img src="./build/images/products/ingredients-pictograms/ellipse-left.svg"
+                                       alt=""></span>
                             Canne à sucre
                             <span><img src="./build/images/products/ingredients-pictograms/ellipse-right.svg"
                                        alt=""></span>

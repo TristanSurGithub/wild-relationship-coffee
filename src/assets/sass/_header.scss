@@ -9,15 +9,32 @@ header {
     ul {
       display: flex;
       justify-content: space-around;
-      align-items: center;
       margin: 0;
+      padding: 0;
 
       li {
-
         &:first-child {
-          margin-top: 2em;
-          margin-left: 10%;
+          margin-top: 1em;
+          margin-left: 15%;
+          @media (min-width: $breakpoint-desktop-xl) {
+            margin-top: 2em;
+            margin-left: 10%;
+          }
         }
+
+        .line {
+          margin-bottom: 1em;
+          @media (min-width: $breakpoint-desktop-xl) {
+            margin-bottom: 2em;
+          }
+        }
+
+        &:hover {
+          .line {
+            height: 5px;
+          }
+        }
+
         a {
           text-decoration: none;
           color: $neutral-color-primary-grey;
