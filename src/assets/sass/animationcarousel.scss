@@ -1,16 +1,17 @@
 //WIP Animation
 
-//.motion-object {
-//  offset-path: path('M893.5 96.5C893.5 354.417 666.876 467 364.5 467C237.172 467 119.996 429.926 27 367.743C-100.85 282.255 -183 149.311 -183 0');
-//  animation: move 3s linear infinite;
-//  transform: rotate(200deg);
-//}
-//
-//@keyframes move {
-//  0% {
-//    offset-distance: 0%;
-//  }
-//  100% {
-//    offset-distance: 100%;
-//  }
-//}
+.animated {
+  offset-path: path('M879 -2C879 255.917 639.876 389 337.5 389C210.172 389 92.9964 351.926 0 289.743C-127.85 204.255 -210 71.3105 -210 -78');
+  animation: move 2s linear forwards;
+  transform: rotate(200deg);
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 50%;
+  }
+}

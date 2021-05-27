@@ -5,6 +5,9 @@ var imageSelectProducts = slides.getElementsByClassName('product');
 var imageSelectIntensity = slides.getElementsByClassName('intensity');
 var SelectTitleIntensity = slides.getElementsByClassName('title-intensity');
 var getProfile = profiles.getElementsByClassName('profile');
+var getProductContainer = document.getElementById('current-product-container');
+
+var getIngredientContainer = document.getElementById('ingredient-container');
 
 
 var imageProductSelect = document.getElementById('current-product');
@@ -26,7 +29,7 @@ for (var i = 0; i < imageSelectProducts.length; i++) {
 
 function goToSlide(n) {
     counter = (n + imageSelectProducts.length) % imageSelectProducts.length;
-    changeImageProduct(imageSelectProducts[counter]);
+    changeImageProduct(imageSelectProducts[counter], counter);
     changeImageIntensity(imageSelectIntensity[counter]);
     changeTitleIntensity(SelectTitleIntensity[counter]);
     changeProfile(getProfile[counter]);
@@ -34,36 +37,67 @@ function goToSlide(n) {
 
 function nextSlide() {
     goToSlide(counter + 1);
+    Animated();
 }
 
 function prevSlide() {
     goToSlide(counter - 1);
+    Animated();
 }
 
-function changeImageProduct(imagem) {
-    var path = imagem.getAttribute('src');
+function Animated() {
+    getProductContainer.classList.add('animated');
+    getProductContainer.style.top = "-90px";
+    setTimeout(stopAnimated, 4000);
+}
+
+function stopAnimated() {
+    getProductContainer.classList.remove('animated');
+    getProductContainer.style.top = "15%";
+}
+
+function changeImageProduct(image, index) {
+    var path = image.getAttribute('src');
     imageProductSelect.setAttribute('src', path);
+    switch (index) {
+        case 0:
+            getIngredientContainer.className = '';
+            getIngredientContainer.className = 'bg-circle-green';
+            break;
+        case 1:
+            getIngredientContainer.className = '';
+            getIngredientContainer.className = 'bg-circle-purple';
+            break;
+        case 2:
+            getIngredientContainer.className = '';
+            getIngredientContainer.className = 'bg-circle-yellow';
+            break;
+        default:
+            getIngredientContainer.className = '';
+            getIngredientContainer.className = 'bg-circle-green';
+    }
 }
 
-function changeImageIntensity(imagem) {
-    var path = imagem.getAttribute('src');
+function changeImageIntensity(image) {
+    var path = image.getAttribute('src');
     imageIntensitySelect.setAttribute('src', path);
 }
 
-function changeTitleIntensity(imagem) {
-    imageTitleIntensitySelect.innerHTML = imagem.textContent;
+function changeTitleIntensity(title) {
+    imageTitleIntensitySelect.innerHTML = title.textContent;
 }
 
-function changeProfile(imagem) {
+function changeProfile(profileTag) {
     var getProfileActive = document.getElementById('active-profile');
     getProfileActive.removeAttribute('id');
-    imagem.setAttribute('id','active-profile');
+    profileTag.setAttribute('id', 'active-profile');
 }
 
-function clickImage(imagem, index) {
-    imagem.addEventListener('click', function (event) {
+function clickImage(image, index) {
+    image.addEventListener('click', function (event) {
         event.preventDefault();
-        changeImageProduct(imagem, index);
+        changeImageProduct(image, index);
         goToSlide(index);
+        Animated();
     });
 }
